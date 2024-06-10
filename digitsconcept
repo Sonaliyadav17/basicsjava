@@ -1,0 +1,32 @@
+//extraction of digits 
+//counting of digits
+
+import java.util.*;
+import java.math.BigInteger;
+
+public class digitconcept{
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("enter the input: ");
+        int n = scn.nextInt();
+
+        int count = 0;  // for counting digits
+
+        while(n>0){
+            int l = n % 10 ;    // for extracting digits but for back
+            System.out.println(l);    // for extracting digits but from back
+
+            count += 1 ;   // for counting the digits
+
+            n = n / 10 ; 
+
+        }   
+        System.out.println("no of digits in input given:  " + count); 
+
+        ///another method for digit counting
+
+        int count1 =  (int)(Math.log10(n) + 1) ;
+
+
+    }
+}
