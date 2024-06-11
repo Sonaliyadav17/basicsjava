@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class armstrong {
+    public static void main(String[] args) {
+       System.out.print("enter the number: ");
+        Scanner scn = new Scanner (System.in);
+		int n = scn.nextInt();
+		int sum = 0;
+		int dup = n; 
+		int dup1 = n ;
+		int count = 0;
+
+		while ( n > 0) {
+
+			int last = n % 10 ;
+
+			count = count +1 ;
+			
+			n = n / 10 ;
+			
+		}
+		System.out.println(count);
+
+		while ( dup > 0) {
+
+			int last = dup % 10 ;
+			
+			last = (int)Math.pow(last, count);
+  			
+			sum +=last;
+			
+			dup = dup / 10 ;
+			
+		}
+		System.out.println(sum);
+
+		if (sum == dup1){
+			System.out.println("true");
+		}
+		else{
+			System.out.println("false");
+		}
+    }
+}
