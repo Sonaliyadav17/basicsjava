@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class hcfgcd {
+    public static void main(String[] args) {
+        System.out.print("enter number 1: ");
+        Scanner scn = new Scanner(System.in);
+        int n1 = scn.nextInt() ;
+        System.out.print("enter number 2: ");
+        int n2 = scn.nextInt() ;
+
+        int m = 0;
+
+        for (int i = 1; i <= n1 ; i++){
+            if (n1 % i == 0){
+                for (int j =1 ; j <= n1 ; j++){
+                    if ( n2 %j ==0 ){
+                        if ( i == j){  
+                            m = j ;
+                            
+                            
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+        System.out.println(m);
+        
+    }    
+}
+
+// alternate method 
+
+public class hcfgcd {
+    public static void main(String[] args) {
+        int x = 20;
+        int y = 5 ;
+        int n = 1;
+        int hcf = 1;
+        int larger = (x>y)? x : y ;
+        
+        for (int i = 0 ; i <= larger ; i++){
+            if (x % n == 0 && y % n == 0){
+                hcf = n ;
+
+            }
+            n++;
+
+        }
+        System.out.println(hcf);
+    }
+}
