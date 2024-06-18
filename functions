@@ -1,0 +1,45 @@
+import java.util.*;
+public class function {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("number 1 : ");
+        int a = scn.nextInt();
+        System.out.print("number 2 : ");
+        int b = scn.nextInt();
+
+        sum(a,b);
+
+        int difference = diff(a,b);
+        System.out.println(difference);
+
+        System.out.print(" enter your name: ");
+        String namee = scn.nextLine();
+        name(namee);
+
+
+    }
+    // if we are taking a return type in function then in main class
+    // we have to assign the the function in a new variable 
+    // if no return type then we can direct access the function
+
+    static void sum(int a , int b){
+        
+        int sum = a + b ;
+        System.out.println("the sum " + sum);
+        // return sum;
+
+    }
+    
+    static int diff(int a , int b){
+        int diff = a - b;
+        if (diff < 0){
+            diff = -(diff);
+        }
+        return diff;
+    }
+
+    static void name(String name){
+        System.out.println("hello " + name + " how are you feeling today?");
+        
+    }
+}
