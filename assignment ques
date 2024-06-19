@@ -2,23 +2,23 @@ prime number
 
 import java.util.*;
 public class prime {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.print("enter the number to check: ");
         int n = scn.nextInt();
         isPrime(n);
     }
     static void isPrime(int a){
+        boolean isPrime = true ;
         for ( int i = 2 ; i < a ; i++){
             if(a % i == 0){
-                System.out.println(" not prime number");
+                
+                isPrime = false;
                 break ;
             }
-            else{
-                System.out.println("prime number");
-                break;
-            }
+            
         }
+        System.out.println(isPrime);
     }
 }
 
