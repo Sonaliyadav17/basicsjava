@@ -10,14 +10,27 @@ public class function {
         sum(a,b);
 
         int difference = diff(a,b);
-        System.out.println(difference);
+        System.out.println("diff: " + difference);
 
+        // strings
         System.out.print(" enter your name: ");
-        String namee = scn.nextLine();
+        Scanner sc = new Scanner(System.in);
+        String namee = sc.nextLine();
+        
         name(namee);
+
+        // swap numbers
+
+        System.out.print("enter c : ");
+        int c = scn.nextInt();
+        System.out.print("enter d : ");
+        int d = scn.nextInt();
+        swap(c , d);
+
 
 
     }
+
     // if we are taking a return type in function then in main class
     // we have to assign the the function in a new variable 
     // if no return type then we can direct access the function
@@ -38,8 +51,19 @@ public class function {
         return diff;
     }
 
-    static void name(String name){
-        System.out.println("hello " + name + " how are you feeling today?");
-        
+    static void name(String namee){
+        String msg = "hello " + namee + " how are you feeling today?";
+        System.out.println(msg);
     }
+
+    static void swap(int c , int d){
+        int temp = c ;
+        c = d;
+        d = temp;
+        System.out.println("c is :"+ c);
+        System.out.println("d is :"+ d);
+    }
+
+    
 }
+ 
